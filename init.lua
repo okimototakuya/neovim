@@ -83,11 +83,17 @@ inoremap ' ''<LEFT>
 """"""""""""""""""""""""""
 """""カーソル移動"""""""""
 """"""""""""""""""""""""""
-inoremap <c-j> <Down>
-inoremap <c-k> <Up>
-inoremap <c-l> <Right>
-inoremap <c-h> <Left>
-
+if has("mac")
+    inoremap <c-j> <Down>
+    inoremap <c-k> <Up>
+    inoremap <c-l> <Right>
+    inoremap <c-h> <Left>
+elseif has("win64")
+    inoremap <F13-j> <Down>
+    inoremap <F13-k> <Up>
+    inoremap <F13-l> <Right>
+    inoremap <F13-h> <Left>
+endif
 
 """"""""""""""""""""""""""
 """""可視化"""""""""""""""
