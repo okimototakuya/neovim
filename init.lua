@@ -27,10 +27,10 @@ require("lazy").setup({
     lazy = false, -- 起動時に必ずロード
     priority = 1000, -- 他より先に読む
     init = function()
-      vim.g.sonokai_style = "andromeda"
+      -- vim.g.sonokai_style = "andromeda"
       -- vim.g.sonokai_style = "espresso"
       -- vim.g.sonokai_style = "atlantis"
-      -- vim.g.sonokai_style = "shusia"
+      vim.g.sonokai_style = "shusia"
       -- vim.g.sonokai_style = "maia"
       vim.g.sonokai_better_performance = 1
     end,
@@ -46,6 +46,14 @@ require("lazy").setup({
   --     vim.cmd.colorscheme("tokyonight")
   --   end,
   -- },
+  -- {
+  --   "ellisonleao/gruvbox.nvim", -- カラースキーム
+  --   lazy = false, -- 起動時に必ずロード
+  --   priority = 1000, -- 他より先に読む
+  --   config = function()
+  --     vim.cmd.colorscheme("gruvbox")
+  --   end,
+  -- },
   {
     "nvim-telescope/telescope.nvim", -- 曖昧な検索
     cmd = "Telescope",
@@ -57,7 +65,25 @@ require("lazy").setup({
     event = { "BufReadPost", "BufNewFile" },
   },
   {
-    "lukas-reineke/indent-blankline.nvim", -- インデントガイド
+    "lukas-reineke/indent-blankline.nvim", -- インライン・インデントガイド
+    main = "ibl",
+    event = { "BufReadPost", "BufNewFile" },
+    opts = {
+      indent = { char = "|" },
+      scope = {
+        enabled = true,
+        show_start = false,
+        show_end = false,
+      },
+      exclude = {
+        filetypes = {
+          "help",
+          "dashboard",
+          "lazy",
+          "NvimTree",
+        },
+      },
+    },
   }
 })
 
