@@ -94,26 +94,22 @@ vim.opt.number = true -- 行番号を表示
 -- vim.opt.relativenumber = true -- 相対行番号を表示
 vim.opt.mouse = 'a' -- マウス操作を有効化
 vim.opt.clipboard:append('unnamedplus') -- システムクリップボードと連携
-vim.opt.tabstop = 4 -- タブ幅を4に設定
-vim.opt.shiftwidth = 4 -- 自動インデント幅を4に設定
-vim.opt.expandtab = true -- タブをスペースに変換
 vim.api.nvim_create_autocmd("ColorScheme", { -- 色相などの詳細設定
   -- pattern = "molokai",
   pattern = "sonokai",
   callback = function()
---     vim.api.nvim_set_hl(0, "DiagnosticError", { fg = "#ff5f5f" }) -- LSP / diagnosticsが暗い問題への対処
---     vim.api.nvim_set_hl(0, "DiagnosticWarn",  { fg = "#ffaf00" })
---     vim.api.nvim_set_hl(0, "DiagnosticInfo",  { fg = "#5fd7ff" })
---     vim.api.nvim_set_hl(0, "DiagnosticHint",  { fg = "#5fffaf" })
---     vim.api.nvim_set_hl(0, "Comment",  { fg = "#6b6b6b", italic = true }) -- 色相・彩度
---     vim.api.nvim_set_hl(0, "String",   { fg = "#d7af5f" })
---     vim.api.nvim_set_hl(0, "Function", { fg = "#61afef" })
---     vim.api.nvim_set_hl(0, "Constant", { fg = "#e06c75" })
-  local set = vim.api.nvim_set_hl
-    set(0, "Keyword", { fg = "#7aa2f7" })  -- Keyword を青寄りに
-    set(0, "Function", { fg = "#7dcfff" })  -- Function を少しシアン寄りに
-    set(0, "String", { fg = "#9ece6a" })  -- String を低彩度ブルーグリーンに
-    set(0, "Type", { fg = "#89b4fa" })  -- Type をクールに
+    -- vim.api.nvim_set_hl(0, "DiagnosticError", { fg = "#ff5f5f" }) -- LSP / diagnosticsが暗い問題への対処
+    -- vim.api.nvim_set_hl(0, "DiagnosticWarn",  { fg = "#ffaf00" })
+    -- vim.api.nvim_set_hl(0, "DiagnosticInfo",  { fg = "#5fd7ff" })
+    -- vim.api.nvim_set_hl(0, "DiagnosticHint",  { fg = "#5fffaf" })
+    -- vim.api.nvim_set_hl(0, "Comment",  { fg = "#6b6b6b", italic = true }) -- 色相・彩度
+    -- vim.api.nvim_set_hl(0, "String",   { fg = "#d7af5f" })
+    -- vim.api.nvim_set_hl(0, "Function", { fg = "#61afef" })
+    -- vim.api.nvim_set_hl(0, "Constant", { fg = "#e06c75" })
+    vim.api.nvim_set_hl(0, "Keyword", { fg = "#7aa2f7" })  -- Keyword を青寄りに
+    vim.api.nvim_set_hl(0, "Function", { fg = "#7dcfff" })  -- Function を少しシアン寄りに
+    vim.api.nvim_set_hl(0, "String", { fg = "#9ece6a" })  -- String を低彩度ブルーグリーンに
+    vim.api.nvim_set_hl(0, "Type", { fg = "#89b4fa" })  -- Type をクールに
   end,
 })
 -- vim.api.nvim_set_hl(0, "@comment", { fg = "#75715E", italic = true }) -- treesitterによるhighlightの上書き
