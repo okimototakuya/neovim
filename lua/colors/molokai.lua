@@ -1,4 +1,4 @@
-vim.cmd.colorscheme("sonokai")
+vim.cmd.colorscheme("molokai")
 
 -- 詳細設定
 -- vim.api.nvim_set_hl(0, "DiagnosticError", { fg = "#ff5f5f" })

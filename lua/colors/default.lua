@@ -1,4 +1,9 @@
-vim.cmd.colorscheme("sonokai")
+-- カラースキーム
+vim.cmd([[colorscheme desert]])
+-- vim.cmd([[colorscheme darkblue]])
+-- vim.cmd([[colorscheme morning]])
+-- vim.cmd([[colorscheme elflord]])
+-- vim.cmd([[colorscheme blue]])
 
 -- 詳細設定
 -- vim.api.nvim_set_hl(0, "DiagnosticError", { fg = "#ff5f5f" })

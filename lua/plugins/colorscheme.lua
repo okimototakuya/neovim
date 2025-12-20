@@ -1,13 +1,13 @@
 return {
--- {
---   "tomasr/molokai",
---   lazy = false, -- 起動時に必ずロード
---   priority = 1000, -- 他より先に読む
---   config = function()
---     vim.cmd.colorscheme("molokai")
---     vim.g.molokai_disable_italic_comment = 1 -- italic or bold
---   end,
--- },
+  {
+    "tomasr/molokai",
+    lazy = false, -- 起動時に必ずロード
+    priority = 1000, -- 他より先に読む
+    config = function()
+      vim.cmd.colorscheme("molokai")
+      vim.g.molokai_disable_italic_comment = 1 -- italic or bold
+    end,
+  },
   {
     "sainnhe/sonokai",
     lazy = false, -- 起動時に必ずロード
@@ -24,20 +24,20 @@ return {
     --   vim.cmd.colorscheme("sonokai")
     -- end,
   },
--- {
---   "folke/tokyonight.nvim",
---   lazy = false, -- 起動時に必ずロード
---   priority = 1000, -- 他より先に読む
---   config = function()
---     vim.cmd.colorscheme("tokyonight")
---   end,
--- },
--- {
---   "ellisonleao/gruvbox.nvim",
---   lazy = false, -- 起動時に必ずロード
---   priority = 1000, -- 他より先に読む
---   config = function()
---     vim.cmd.colorscheme("gruvbox")
---   end,
--- },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false, -- 起動時に必ずロード
+    priority = 1000, -- 他より先に読む
+    config = function()
+      vim.cmd.colorscheme("tokyonight")
+    end,
+  },
+  {
+    "ellisonleao/gruvbox.nvim",
+    lazy = false, -- 起動時に必ずロード
+    priority = 1000, -- 他より先に読む
+    config = function()
+      vim.cmd.colorscheme("gruvbox")
+    end,
+  },
 }
