@@ -1,5 +1,6 @@
 -- 基本設定 
 require("config.options")
+require("config.keymaps")
 
 -- lazy.nvimをruntimepathに追加
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
